@@ -40,6 +40,7 @@ class _ServicesState extends State<Services> {
       },
       child: Scaffold(
         appBar: appbar(),
+        drawer: drawer(),
         body: SafeArea(
           child: Container(
             padding: const EdgeInsets.only(left: 10, right: 10),

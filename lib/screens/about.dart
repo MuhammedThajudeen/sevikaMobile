@@ -5,6 +5,7 @@ import 'package:sevika/common%20widget/appbar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sevika/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../drawer.dart';
 import 'homescreen.dart';
 
 class About extends StatelessWidget {
@@ -20,6 +21,7 @@ class About extends StatelessWidget {
       },
       child: Scaffold(
         appBar: appbar(),
+        drawer: drawer(),
         body: Container(
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(color: maincolor),
