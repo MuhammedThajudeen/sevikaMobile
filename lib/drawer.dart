@@ -21,6 +21,7 @@ class _drawerState extends State<drawer> {
         padding: const EdgeInsets.all(0),
         children: [
           const DrawerHeader(
+            curve: Curves.easeInCirc,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(bottomLeft: Radius.circular(25),bottomRight: Radius.circular(25)),
               color: Color.fromARGB(255, 133, 172, 250),

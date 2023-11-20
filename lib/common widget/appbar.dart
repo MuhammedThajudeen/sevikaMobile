@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 AppBar appbar() {
   return AppBar(
+    iconTheme: IconThemeData(color: Colors.white),
     elevation: 0,
     backgroundColor: Color(0xff001B79),
     title: Text(
