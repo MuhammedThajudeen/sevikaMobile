@@ -23,13 +23,12 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appbar(),
-      body: SafeArea(
-          child: Container(
-            alignment: Alignment.topCenter,
-            height: MediaQuery.of(context).size.height,
-        color: maincolor,
-        child: MySlideView(),
-      )),
+      body: Container(
+        alignment: Alignment.topCenter,
+        height: MediaQuery.of(context).size.height,
+              color: maincolor,
+              child: MySlideView(),
+            ),
       drawer: const drawer(),
     );
   }

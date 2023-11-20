@@ -41,72 +41,70 @@ class _ServicesState extends State<Services> {
       child: Scaffold(
         appBar: appbar(),
         drawer: drawer(),
-        body: SafeArea(
-          child: Container(
-            padding: const EdgeInsets.only(left: 10, right: 10),
-            color: maincolor,
-            child: Column(
-              children: [
-                 Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text(
-                    'Services',
-                    style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white
-                    ),
-                    )
+        body: Container(
+          padding: const EdgeInsets.only(left: 10, right: 10),
+          color: maincolor,
+          child: Column(
+            children: [
+               Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Text(
+                  'Services',
+                  style: GoogleFonts.poppins(
+                    textStyle: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white
                   ),
+                  )
                 ),
-                Expanded(
-                  child: GridView.builder(
-                    gridDelegate:
-                        const SliverGridDelegateWithMaxCrossAxisExtent(
-                      maxCrossAxisExtent: 200,
-                      childAspectRatio: 0.9,
-                      crossAxisSpacing: 20,
-                      mainAxisSpacing: 20,
-                    ),
-                    itemCount: data != null ? data!.services.length : 0,
-                    itemBuilder: (context, index) {
-                      return Container(
-                        padding: const EdgeInsets.all(8.0),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                            border: Border.all(color: Colors.black),
-                            borderRadius: BorderRadius.circular(15)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            // Replace the following with your logo widget
-                            Image.network(
-                              data!.services[index].categoryImage.toString(),
-                              fit: BoxFit.fill,
-                            ),
-                            const SizedBox(height: 10),
-                            Text(
-                              data!.services[index].name.toString(),
-                              style: GoogleFonts.poppins(
-                                textStyle: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold,
-                                    ),
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                            const SizedBox(height: 5),
-                            const Icon(Icons.arrow_forward_ios_rounded),
-                          ],
-                        ),
-                      );
-                    },
+              ),
+              Expanded(
+                child: GridView.builder(
+                  gridDelegate:
+                      const SliverGridDelegateWithMaxCrossAxisExtent(
+                    maxCrossAxisExtent: 200,
+                    childAspectRatio: 0.9,
+                    crossAxisSpacing: 20,
+                    mainAxisSpacing: 20,
                   ),
+                  itemCount: data != null ? data!.services.length : 0,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      padding: const EdgeInsets.all(8.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                          border: Border.all(color: Colors.black),
+                          borderRadius: BorderRadius.circular(15)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          // Replace the following with your logo widget
+                          Image.network(
+                            data!.services[index].categoryImage.toString(),
+                            fit: BoxFit.fill,
+                          ),
+                          const SizedBox(height: 10),
+                          Text(
+                            data!.services[index].name.toString(),
+                            style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  ),
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          const SizedBox(height: 5),
+                          const Icon(Icons.arrow_forward_ios_rounded),
+                        ],
+                      ),
+                    );
+                  },
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
