@@ -3,6 +3,7 @@ import 'package:sevika/provider/carousel_provider.dart';
 import 'package:sevika/provider/services_provider.dart';
 import 'package:sevika/screens/homescreen.dart';
 import 'package:provider/provider.dart';
+import 'package:sevika/screens/loginscreen.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           primaryColor: Colors.white
         ),
-        home: HomeScreen(),
+        home: const loginscreen(),
       ),
     );
   }
