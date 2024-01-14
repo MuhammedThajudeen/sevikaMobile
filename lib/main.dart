@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sevika/provider/carousel_provider.dart';
-import 'package:sevika/provider/services_provider.dart';
-import 'package:sevika/screens/homescreen.dart';
 import 'package:provider/provider.dart';
+import 'package:sevika/view/homescreen.dart';
+import 'package:sevika/viewmodel/carousel_provider.dart';
+import 'package:sevika/viewmodel/services_provider.dart';
 void main() {
   runApp(const MyApp());
 }
