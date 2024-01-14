@@ -62,7 +62,7 @@ class _drawerState extends State<drawer> {
           fontSize: 16,
             )),
             onTap: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                   context, MaterialPageRoute(builder: (context) => const Services()));
             },
           ),
@@ -73,7 +73,7 @@ class _drawerState extends State<drawer> {
           fontSize: 16,
             )),
             onTap: () {
-              Navigator.push(context,
+              Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (context) => const About()));
             },
           ),

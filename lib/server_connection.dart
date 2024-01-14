@@ -3,8 +3,6 @@ import 'package:http_parser/http_parser.dart';
 import 'constants.dart';
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io';
-import 'dart:ui';
 
 Future<http.Response> postMethodApi(
     var postData, String strUrl, var header) async {
@@ -13,9 +11,6 @@ Future<http.Response> postMethodApi(
       .post(
         Uri.parse(strUrl),
         headers: header,
-        // <String, String>{
-        //   'Content-Type': 'application/json; charset=UTF-8',
-        // },
         body: jsonEncode(postData),
       )
       .timeout(const Duration(seconds: 30));
