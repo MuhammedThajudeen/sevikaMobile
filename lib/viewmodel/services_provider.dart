@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../models/service_model.dart';
+import 'package:sevika/model/service_model.dart';
 
 class Servicesdata extends ChangeNotifier {
   Services_model? _data;

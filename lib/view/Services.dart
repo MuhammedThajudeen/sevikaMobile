@@ -1,12 +1,12 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:sevika/model/service_model.dart';
 import 'package:sevika/server_connection.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sevika/viewmodel/services_provider.dart';
 import '../common widget/appbar.dart';
 import '../constants.dart';
 import '../drawer.dart';
-import '../models/service_model.dart';
-import '../provider/services_provider.dart';
 import 'homescreen.dart';
 import 'package:provider/provider.dart';
 
