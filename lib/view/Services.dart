@@ -5,8 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import '../common widget/appbar.dart';
 import '../constants.dart';
 import '../drawer.dart';
-import '../models/service_model.dart';
-import '../provider/services_provider.dart';
+import '../model/service_model.dart';
+import '../viewmodel/services_provider.dart';
 import 'homescreen.dart';
 import 'package:provider/provider.dart';
 

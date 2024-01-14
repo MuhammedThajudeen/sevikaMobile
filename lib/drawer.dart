@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sevika/constants.dart';
-import 'package:sevika/screens/Services.dart';
-import 'package:sevika/screens/about.dart';
-import 'package:sevika/screens/homescreen.dart';
+import 'package:sevika/view/Services.dart';
+import 'package:sevika/view/about.dart';
+import 'package:sevika/view/homescreen.dart';
 
 class drawer extends StatefulWidget {
   const drawer({super.key});
