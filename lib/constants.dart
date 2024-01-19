@@ -5,6 +5,7 @@
 import 'package:flutter/material.dart';
 
 String base_url = "https://api.sevika.online/";
+String login_url = 'auth';
 
 
 //colours
