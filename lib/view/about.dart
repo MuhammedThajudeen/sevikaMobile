@@ -38,7 +38,8 @@ class About extends StatelessWidget {
                 AboutContent(content: getstarted),
                 Footercontainer(titletext: 'Find us', contenttext: '673582, kozhikode, kerala', icondata: Icons.location_city, ontaplink: mapUrl,),
                 Footercontainer(titletext: 'Call us', contenttext: '8195927224', icondata: Icons.phone, ontaplink: telephone,),
-                Footercontainer(titletext: 'Mail us', contenttext: 'sevika12@gmail.com', icondata: Icons.mail, ontaplink: email,)
+                Footercontainer(titletext: 'Mail us', contenttext: 'sevika12@gmail.com', icondata: Icons.mail, ontaplink: email,),
+                const SizedBox(height: 10,)
               ],
             ),
           ),
@@ -69,7 +70,6 @@ class Footercontainer extends StatelessWidget {
     return GestureDetector(
       onTap: () async{
         var url = Uri.parse(ontaplink);
-        print('ur.. $url');
           await launchUrl(url);
         
       },

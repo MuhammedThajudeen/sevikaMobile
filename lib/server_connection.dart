@@ -1,6 +1,4 @@
 import 'package:http/http.dart' as http;
-import 'package:http_parser/http_parser.dart';
-import 'constants.dart';
 import 'dart:async';
 import 'dart:convert';
 
