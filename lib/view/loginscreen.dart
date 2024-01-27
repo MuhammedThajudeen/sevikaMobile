@@ -34,6 +34,7 @@ class _loginscreenState extends State<loginscreen> {
           color: maincolor,
           child: SingleChildScrollView(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Stack(
                   children: [
@@ -64,7 +65,7 @@ class _loginscreenState extends State<loginscreen> {
                     //  customtextfield(450, 'Password')
                   ],
                 ),
-                customtextfield('Mobile no', usernameController,
+                customtextfield('Email', usernameController,
                     passwordtext: false, status: 1),
                 const SizedBox(
                   height: 20,
@@ -72,11 +73,11 @@ class _loginscreenState extends State<loginscreen> {
                 customtextfield('Password', passwordController,
                     passwordtext: true, status: 2),
                 TextButton(
-                    onPressed: () {},
-                    child: const Text(
-                      'New to Sevika? Sign Up',
-                      style: TextStyle(color: Colors.white),
-                    )),
+                onPressed: () {},
+                child: const Text(
+                  'Forgot Password?',
+                  style: TextStyle(color: Color.fromARGB(255, 109, 207, 226)),
+                )),
                 Container(
                   margin: const EdgeInsets.only(top: 50, left: 80, right: 80),
                   height: 50,
@@ -86,12 +87,13 @@ class _loginscreenState extends State<loginscreen> {
                       borderRadius: BorderRadius.all(Radius.circular(50))),
                   child: TextButton(
                       onPressed: () {
-                        Navigator.pushReplacement<void, void>(
-                          context,
-                          MaterialPageRoute<void>(
-                            builder: (BuildContext context) => const HomeScreen()
-                          ),
-                        );
+                        loginapi();
+                        // Navigator.pushReplacement<void, void>(
+                        //   context,
+                        //   MaterialPageRoute<void>(
+                        //     builder: (BuildContext context) => const HomeScreen()
+                        //   ),
+                        // );
                         print('username : ${usernameController.text}');
                         print('usernamepass : ${passwordController.text}');
                       },
@@ -100,16 +102,22 @@ class _loginscreenState extends State<loginscreen> {
                         style: TextStyle(color: Colors.white),
                       )),
                 ),
-                SizedBox(height: 50),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    socialmediabutton(FontAwesomeIcons.googlePlusG, 'Google',
-                        const Color(0xffDF4A32)),
-                    socialmediabutton(FontAwesomeIcons.facebookF, 'Facebook',
-                        const Color(0xff39579A))
-                  ],
-                )
+                TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'New to Sevika? Sign Up',
+                      style: TextStyle(color: Colors.white),
+                    )),
+                // SizedBox(height: 50),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //   children: [
+                //     socialmediabutton(FontAwesomeIcons.googlePlusG, 'Google',
+                //         const Color(0xffDF4A32)),
+                //     socialmediabutton(FontAwesomeIcons.facebookF, 'Facebook',
+                //         const Color(0xff39579A))
+                //   ],
+                // )
               ],
             ),
           ),
@@ -146,7 +154,7 @@ class _loginscreenState extends State<loginscreen> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Expanded(
-            child: TextField(
+            child: TextFormField(
           // cursorColor: Colors.black,
           autocorrect: false,
           autofocus: false,
@@ -233,12 +241,13 @@ class _loginscreenState extends State<loginscreen> {
     String strUrl = base_url + login_url;
 
     var postData = {
-        "username": usernameController.text,
+      "mobile" : usernameController.text,
+        "email": '',
         "password": passwordController.text
       };
 
     var headerData = {
-        '',
+        '': '',
       };
     
     try {
